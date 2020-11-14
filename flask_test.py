@@ -17,11 +17,11 @@ persons.append(Person("2onlcbqfi5zad98","Rudolf"))
 personIndex = 0
 test =5
 app = Flask(__name__)
-@app.route("/")
-def home():
-    print("home")
+@app.route("/<num>")
+def home(num):
+    #print("home")
     records = conn.GetLogData()
-    person = persons[1]
+    person = persons[int(num)]
     bc = person.GetBeerCount(records)
     return render_template("base.html",name = person.name,score = bc)
 if __name__ == "__main__":

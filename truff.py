@@ -54,7 +54,8 @@ class TurffConnection:
                 count = count + 25
                 print(records)
                 for r in records:  
-                    if(type(r) is str):
+                    print(type(r))
+                    if(type(r) != dict):
                         end = True
                         #print(end)
                         break
