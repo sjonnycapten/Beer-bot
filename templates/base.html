@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" type = "text/css"href="{{url_for('static',filename ='style.css')}}">
+        <script language="javascript">
+            setTimeout(function(){
+               window.location.reload(1);
+            }, 50000);
+            </script>
+    </head>
+    <body>
+        <div class="name">
+            
+                {{name}}
+            
+        </div>
+        <div class="score"> 
+             <table>
+                 <tr>
+                    <td>Aantal: </td> 
+                    <td>{{score}}</td>
+                 </tr>
+             </table>
+        </div>
+        
+    </body>
+</html>
