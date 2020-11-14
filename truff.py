@@ -52,7 +52,7 @@ class TurffConnection:
                 string_content = bytes_content.decode("UTF-8")
                 records = json.loads(string_content)
                 count = count + 25
-                
+                print(records)
                 for r in records:  
                     if(type(r) is str):
                         end = True
