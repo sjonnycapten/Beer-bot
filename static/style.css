@@ -10,10 +10,10 @@ font-family: "Titan one";
 .name{
   width: 51%;
   text-align:center;
-  height: 10%;
+  height: 12%;
   margin-left:auto;
   margin-right: auto;
-  margin-top: 13%;
+  margin-top: 20%;
   font-size: 86px;
   color:#E8E1EF;
   /*background-color:#E8E1EF;*/
@@ -21,6 +21,7 @@ font-family: "Titan one";
 
 
 td {
+  border-style : hidden!important;
   width: 150px;
   text-align: center;
   border: 1px solid black;
@@ -30,7 +31,7 @@ table
 {
   border-spacing: 0 15px;
   text-align:center;
-  margin-left:34.5%;
+  margin-left:28%;
   margin-right: auto;
   margin-top: 7%;
   font-size: 70px;
