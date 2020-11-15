@@ -46,15 +46,15 @@ class TurffConnection:
             while not end: 
 
                 data = '{"offset":%s,"limit":%s,"itemUID":"%s"}' % (count,25,self.beerBrands[beer])
-                print(data)
+                #print(data)
                 resp = requests.post(url, headers=headers, data=data)
                 bytes_content = resp.content
                 string_content = bytes_content.decode("UTF-8")
                 records = json.loads(string_content)
                 count = count + 25
-                print(records)
+                #print(records)
                 for r in records:  
-                    print(type(r))
+                    #print(type(r))
                     if(type(r) != dict):
                         end = True
                         #print(end)
