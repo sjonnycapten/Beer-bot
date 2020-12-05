@@ -22,5 +22,6 @@ class Person:
         for x in records:
             if(int(x['amount']) > -23):
                 count += int(x['amount'])
+        self.beerCount = count+self.offset
         return count + self.offset
     
