@@ -11,7 +11,7 @@ class TurffConnection:
         headers["Content-Type"] = "application/json"
         data = {"type":"local","email":"jankaptijn@outlook.com","password":"turff123"} 
         resp = requests.post(url,data = data)
-        self.beerBrands = {'Kordaat': 'la7v3lufqw','Hertog Jan' : '8ldwqfawjn','Brand Pilsener':'40mww3song'}
+        self.beerBrands = {'Kordaat': 'la7v3lufqw','Hertog Jan' : '8ldwqfawjn','Brand Pilsener':'40mww3song','Grolsch Pils':'ylgk8kf0jh'}
         print(resp.content)
     
     def GetLogData(self):
@@ -45,21 +45,23 @@ class TurffConnection:
             count = 0
             while not end: 
 
-                data = '{"offset":%s,"limit":%s,"itemUID":"%s"}' % (count,25,self.beerBrands[beer])
-                #print(data)
+                data = '{"offset":%s,"limit":%s,"itemUID":"%s"}' % (count,100,self.beerBrands[beer])
+                
+                #get data from turff api
                 resp = requests.post(url, headers=headers, data=data)
+                
+                #format data to string
                 bytes_content = resp.content
                 string_content = bytes_content.decode("UTF-8")
                 records = json.loads(string_content)
-                count = count + 25
-                #print(records)
+                
+                
+                count = count + 100
+                
                 for r in records:  
-                    #print(type(r))
                     if(type(r) != dict):
                         end = True
-                        #print(end)
                         break
-                    #print(r)
                     fullRecords.append(r)
 
         return fullRecords 

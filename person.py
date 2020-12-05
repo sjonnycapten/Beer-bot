@@ -1,9 +1,10 @@
 class Person:
-    def __init__(self,id,name):
+    def __init__(self,id,name,offset):
         self.name = name
         self.id = id
         self.beerCount = 0
         self.test = 0
+        self.offset = offset
     
 
     def GetPersonalRecords(self,records):
@@ -21,5 +22,5 @@ class Person:
         for x in records:
             if(int(x['amount']) > -23):
                 count += int(x['amount'])
-        return count
+        return count + self.offset
     

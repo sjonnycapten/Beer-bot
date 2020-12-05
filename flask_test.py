@@ -7,15 +7,13 @@ from truff import TurffConnection
 conn = TurffConnection()
 
 persons = []
-persons.append(Person("wwzbim0rjmkzio1","Jan"))
-persons.append(Person("zlzvgjzzvvhsk7w","robbert"))
-persons.append(Person("uj78s35grni6jlk","Hermen"))
-persons.append(Person ("684ctg3li5eqyzo","Gideon"))
-persons.append(Person("2onlcbqfi5zad98","Rudolf"))
+persons.append(Person("wwzbim0rjmkzio1","Jan",-24))
+persons.append(Person("zlzvgjzzvvhsk7w","robbert",0))
+persons.append(Person("uj78s35grni6jlk","Hermen",0))
+persons.append(Person ("684ctg3li5eqyzo","Gideon",-48))
+persons.append(Person("2onlcbqfi5zad98","Rudolf",0))
 
 
-personIndex = 0
-test =5
 app = Flask(__name__)
 @app.route("/<num>")
 def home(num):
