@@ -22,7 +22,6 @@ scores = []
 app = Flask(__name__)
 @app.route("/")
 def home():
-    #print("home")
     names.clear()
     scores.clear()
     records = conn.GetLogData()
