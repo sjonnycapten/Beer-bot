@@ -34,4 +34,4 @@ def home():
         scores.append(l.beerCount)
     return render_template("base.html",names = names,scores = scores)
 if __name__ == "__main__":
-    app.run() 
+    app.run(host='0.0.0.0') 
