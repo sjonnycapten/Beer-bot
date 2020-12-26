@@ -19,12 +19,7 @@ class Radio:
         #Play the media
         player.play()
 
-
-
-
-
         #Sleep for 5 sec for VLC to complete retries.
         time.sleep(5)
 
-Radio('https://icecast.omroep.nl/radio2-bb-mp3')
-time.sleep(1000000)
+

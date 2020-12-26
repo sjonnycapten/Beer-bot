@@ -1,6 +1,7 @@
 from flask import Flask, redirect, url_for, render_template
 from person import Person
 from truff import TurffConnection
+from sound import Radio
 
 #create a connection to the turf website
 
@@ -17,7 +18,7 @@ persons.append(Person("coto0kfyp1ewvyk","Gernt",0))
 
 names = []
 scores = []
-
+x = Radio('https://icecast.omroep.nl/radio2-bb-mp3')
 
 app = Flask(__name__)
 @app.route("/")
@@ -34,4 +35,5 @@ def home():
         scores.append(l.beerCount)
     return render_template("base.html",names = names,scores = scores)
 if __name__ == "__main__":
-    app.run(host='0.0.0.0') 
+    app.run(host='0.0.0.0')
+ 
