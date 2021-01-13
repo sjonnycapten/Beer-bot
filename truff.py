@@ -11,6 +11,7 @@ class TurffConnection:
         headers["Content-Type"] = "application/json"
         data = {"type":"local","email":"jankaptijn@outlook.com","password":"turff123"} 
         resp = requests.post(url,data = data)
+        print(resp)
         self.beerBrands = {'Kordaat': 'la7v3lufqw','Hertog Jan' : '8ldwqfawjn','Brand Pilsener':'40mww3song','Grolsch Pils':'ylgk8kf0jh'}
         print(resp.content)
     
@@ -26,15 +27,15 @@ class TurffConnection:
         headers["accept"] = "application/json, text/plain, */*"
         headers["accept-encoding"] = "gzip, deflate, br"
         headers["accept-language"] = "nl-NL,nl;q=0.9,en-US;q=0.8,en;q=0.7"
-        headers["content-length"] = "148"
-        headers["Content-Type"] = "application/json"
-        headers["cookie"] = "_hjid=ad23061e-01b5-4af0-93ee-d0271288e7f1; _hjTLDTest=1; _ga=GA1.2.989828755.1600548388; _gid=GA1.2.389293464.1600548388; _fbp=fb.1.1600548388094.1621092380; G_ENABLED_IDPS=google; G_AUTHUSER_H=0; random_session=s%3A8Th6eoPluhUo5za7quEgWNhI56FWNVPg.PBs5HOHUVEj%2Fvl4i56QVAAl%2FxJhPXX5edAZGBlsGJ8Y; _hjAbsoluteSessionInProgress=1; _hjIncludedInPageviewSample=1; _gat_gtag_UA_135468472_2=1"
+        headers["content-length"] = "158"
+        headers["Content-Type"] = "application/json;charset=UTF-8"
+        headers["cookie"] = "_hjid=ad23061e-01b5-4af0-93ee-d0271288e7f1; _ga=GA1.2.989828755.1600548388; G_ENABLED_IDPS=google; _fbp=fb.1.1610578846838.188693731; _gid=GA1.2.8993632.1610578847; _hjIncludedInPageviewSample=1; _hjTLDTest=1; _hjAbsoluteSessionInProgress=0; random_session=s%3AyxV7BLfPb-jIXX48Vr_9-XERs_HS77tZ.S7pM0Cls6o%2FlLPBOxDxryxRA7cNjfKKtvBIZv2KbMsc; _gat_gtag_UA_135468472_2=1"
         headers["origin"] = "https://panel.turff.nl"
         headers["referer"] = "https://panel.turff.nl/huis/1dgmk0msrhfsyvl/turflog"
         headers["sec-fetch-dest"] = "empty"
         headers["sec-fetch-mode"] = "cors"
         headers["sec-fetch-site"] = "same-origin"
-        headers["user-agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
+        headers["user-agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.366"
 
         fullRecords = []
         count = 0
@@ -46,15 +47,18 @@ class TurffConnection:
             while not end: 
 
                 data = '{"offset":%s,"limit":%s,"itemUID":"%s"}' % (count,100,self.beerBrands[beer])
-                
+                #data = '{"offset":%s,"limit":%s,"itemUID":"%s"}' % (count,100,'la7v3lufqw')
+                print(data)
                 #get data from turff api
                 resp = requests.post(url, headers=headers, data=data)
                 
                 #format data to string
                 bytes_content = resp.content
+                print("1")
                 string_content = bytes_content.decode("UTF-8")
+                print(string_content)
                 records = json.loads(string_content)
-                
+                print("3")
                 
                 count = count + 100
                 
