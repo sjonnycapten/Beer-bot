@@ -7,7 +7,7 @@ from truff import TurffConnection
 conn = TurffConnection()
 
 persons = []
-persons.append(Person("wwzbim0rjmkzio1","Jan",-24))
+persons.append(Person("wwzbim0rjmkzio1","Jan",0))
 persons.append(Person("zlzvgjzzvvhsk7w","Robbert",0))
 persons.append(Person("uj78s35grni6jlk","Hermen",0))
 persons.append(Person ("684ctg3li5eqyzo","Gideon",-48))
@@ -34,7 +34,8 @@ def home():
     return render_template("base.html",names = names,scores = scores)
     
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    #app.run(host='0.0.0.0')
+    app.run()
     
  
  
