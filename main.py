@@ -8,7 +8,7 @@ records = conn.GetLogData()
 jan = Person("wwzbim0rjmkzio1","Jan",0)
 robbert = Person("zlzvgjzzvvhsk7w","robbert",0)
 hermen = Person("uj78s35grni6jlk","Hermen",0)
-gideon = Person ("684ctg3li5eqyzo","Gideon",0)
+gideon = Person ("684ctg3li5eqyzo","Gideon",-48)
 rudolf = Person("2onlcbqfi5zad98","Rudolf",0)
 
 
@@ -16,7 +16,7 @@ rudolf = Person("2onlcbqfi5zad98","Rudolf",0)
 
 print("jan: ",jan.GetBeerCount(records))
 print("robbert: ",robbert.GetBeerCount(records))
-print("gideon: ",gideon.GetBeerCount(records) -48)
+print("gideon: ",gideon.GetBeerCount(records))
 print("hermen: ",hermen.GetBeerCount(records))
 print("rudolf: ",rudolf.GetBeerCount(records))
 

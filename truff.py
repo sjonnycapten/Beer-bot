@@ -9,7 +9,7 @@ class TurffConnection:
         url = "https://panel.turff.nl/auth/auth/login"
         headers = CaseInsensitiveDict()
         headers["Content-Type"] = "application/json"
-        data = {"type":"local","email":"jankaptijn@outlook.com","password":"turff123"} 
+        data = {"type":"local","email":"---","password":"---"} 
         resp = requests.post(url,data = data)
         print(resp)
         self.beerBrands = {'Kordaat': 'la7v3lufqw','Hertog Jan' : '8ldwqfawjn','Brand Pilsener':'40mww3song','Grolsch Pils':'ylgk8kf0jh'}
