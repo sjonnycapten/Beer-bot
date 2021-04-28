@@ -1,8 +1,7 @@
-.vscode/settings.json
-__pycache__/truff.cpython-38.pyc
-.vscode/settings.json
-person.pyc
-truff.pyc
-__pycache__/truff.cpython-38.pyc
-__pycache__/person.cpython-38.pyc
-.vscode/settings.json
+
+.vscode/
+*.pyc
+src/__pycache__/
+
+
+
