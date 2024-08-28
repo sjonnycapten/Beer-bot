@@ -1,7 +1,7 @@
 # Beer Bot: Dormitory Drinking Dashboard
 
 ## Overview
-Beer Barons is a small project that mis(uses) the Turff API to create a beer consumption leaderboard for a student dormitory. It analyzes data from the Turff inventory system to determine which dormmate has consumed the most beer. The leaderboard is presented using a small Flask website.
+Beer Bot is a small project that mis(uses) the Turff API to create a beer consumption leaderboard for a student dormitory. It analyzes data from the Turff inventory system to determine which dormmate has consumed the most beer. The leaderboard is presented using a small Flask website.
 
 ## What is Turff?
 [Turff](https://www.turff.nl/) is a service that provides an inventory management system for student dorms. It includes a tablet interface and a website for easy access and management.
